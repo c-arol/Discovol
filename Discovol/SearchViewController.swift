@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import Alamofire
 
 class SearchViewController: UIViewController, UISearchBarDelegate { //CauseFilterViewDelegate {
     
@@ -51,20 +52,21 @@ class SearchViewController: UIViewController, UISearchBarDelegate { //CauseFilte
         self.searchBar.text = term
         self.searchBar.resignFirstResponder()
         self.onBeforeSearch()
-        self.client.searchWithTerm(term, parameters: self.getSearchParameters(), offset: offset, limit: 20, success: {
-            (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
+        self.client.searchWithTerm(term, parameters: self.getSearchParameters(), offset: offset, limit: 30, success: {
+       //     (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
             let results = (response["events"] as Array).map({
                 (business: NSDictionary) -> VolunteerEvent in
                 return VolunteerEvent(dictionary: opportunity)
             })
+            
             self.results += results
             self.total = response["total"] as Int
             self.lastResponse = response as NSDictionary
             self.offset = self.results.count
             self.onResults(self.results, total: self.total, response: self.lastResponse)
             }, failure: {
-                (operation: AFHTTPRequestOperation!, error: NSError!) -> Void in
-                println(error)
+         //       (operation: AFHTTPRequestOperation!, error: NSError!) -> Void in
+             //   println(error)
         })
     }
     
