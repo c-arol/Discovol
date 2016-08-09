@@ -6,6 +6,8 @@
 //  Copyright © 2016 Carol Zhang. All rights reserved.
 //
 
+//incomplete (get event description)
+
 import Foundation
 import CoreLocation
 
@@ -83,6 +85,4 @@ class VolunteerEvent {
             return ""
         }
     }
-    
-    //retrieve description
 }

@@ -71,7 +71,7 @@ class MapViewController: SearchViewController, MKMapViewDelegate {
         }
         self.mapView.addAnnotations(self.annotations)
     }
-    
+
     override func onResultsCleared() {
         self.mapView.removeAnnotations(self.mapView.annotations)
         self.redoSearchButton.hidden = true

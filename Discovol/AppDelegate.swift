@@ -10,6 +10,7 @@ import UIKit
 import Parse
 import GoogleMaps
 import GoogleSignIn
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             $0.server = "https://discovol-parse-cz.herokuapp.com/parse"
         }
         Parse.initializeWithConfiguration(configuration)
+        
+        VolunteerMatchClient.provideAPIKey("575e6c77576da716371b142341bec7aa")
         
         GMSServices.provideAPIKey("AIzaSyACodrK6e1mAx4UX2p64LxCI6P3d2odh-4")
         //GMSPlacesClient.provideAPIKey("AIzaSyACodrK6e1mAx4UX2p64LxCI6P3d2odh-4")

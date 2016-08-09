@@ -14,7 +14,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate { //CauseFilte
     
     var searchBar: UISearchBar!
     
-    var client: VolunteerMatchClient!
+   // var client: VolunteerMatchClient!
     
     var userLocation: UserLocation!
     
@@ -27,7 +27,28 @@ class SearchViewController: UIViewController, UISearchBarDelegate { //CauseFilte
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //self.client = VolunteerMatchClient
+        class VolunteerMatchClient {
+            
+            let VolunteerMatchAPIKey = "575e6c77576da716371b142341bec7aa"
+            let apiToContact = "http://www.volunteermatch.org/api/call?action=searchOpportunities"
+            
+            Alamofire.request(.GET, apiToContact).validate().responseJSON() {response in
+            switch response.result {
+            case .Success:
+            if let value = response.result.value {
+            let json = JSON(value)
+            
+            // Do what you need to with JSON here!
+            // The rest is all boiler plate code you'll use for API requests
+            
+            
+            }
+            case .Failure(let error):
+            print(error)
+            }
+            }
+            
+        }
         
         self.userLocation = UserLocation()
         
