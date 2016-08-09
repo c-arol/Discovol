@@ -40,7 +40,7 @@ class EventDetailsViewController: UIViewController, MKMapViewDelegate {
         self.mapView.delegate = self
         let annotation = MKPointAnnotation()
         let coordinate = CLLocationCoordinate2D(latitude: self.event.latitude!, longitude: self.event.longitude!)
-        annotation.setCoordinate(coordinate)
+        //annotation.setCoordinate(coordinate)
         self.mapView.addAnnotation(annotation)
         self.mapView.setRegion(MKCoordinateRegion(center: coordinate, span: MKCoordinateSpanMake(0.01, 0.01)), animated: false)
         self.mapView.layer.cornerRadius = 9.0

@@ -21,6 +21,7 @@
 		F14A3AFC1D54DE5200C866B9 /* VolunteerEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14A3AFB1D54DE5200C866B9 /* VolunteerEvent.swift */; };
 		F14A3AFE1D54E04A00C866B9 /* VolunteerMatchClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14A3AFD1D54E04A00C866B9 /* VolunteerMatchClient.swift */; };
 		F14A3B001D54EC3D00C866B9 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14A3AFF1D54EC3C00C866B9 /* ActivityIndicator.swift */; };
+		F14A3B061D58F5C900C866B9 /* VolunteerMatchCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14A3B051D58F5C900C866B9 /* VolunteerMatchCategories.swift */; };
 		F17DD2E11D4146660063F6B2 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17DD2DE1D4146660063F6B2 /* Bolts.framework */; };
 		F17DD2E21D4146660063F6B2 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17DD2DF1D4146660063F6B2 /* Parse.framework */; };
 		F17DD2E31D4146660063F6B2 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17DD2E01D4146660063F6B2 /* ParseUI.framework */; };
@@ -58,6 +59,7 @@
 		F14A3AFB1D54DE5200C866B9 /* VolunteerEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolunteerEvent.swift; sourceTree = "<group>"; };
 		F14A3AFD1D54E04A00C866B9 /* VolunteerMatchClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolunteerMatchClient.swift; sourceTree = "<group>"; };
 		F14A3AFF1D54EC3C00C866B9 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		F14A3B051D58F5C900C866B9 /* VolunteerMatchCategories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolunteerMatchCategories.swift; sourceTree = "<group>"; };
 		F17DD2DE1D4146660063F6B2 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		F17DD2DF1D4146660063F6B2 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		F17DD2E01D4146660063F6B2 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				F14A3AFF1D54EC3C00C866B9 /* ActivityIndicator.swift */,
 				F14A3AFB1D54DE5200C866B9 /* VolunteerEvent.swift */,
 				F14A3AFD1D54E04A00C866B9 /* VolunteerMatchClient.swift */,
+				F14A3B051D58F5C900C866B9 /* VolunteerMatchCategories.swift */,
 				F1F481D31D4E3FF600B0B129 /* GoogleService-Info.plist */,
 				F12656421D47F3890067DD4B /* ViewControllers */,
 				F10C864F1D3FF7E80041CFC5 /* AppDelegate.swift */,
@@ -341,6 +344,7 @@
 				F14A3AFE1D54E04A00C866B9 /* VolunteerMatchClient.swift in Sources */,
 				F14A3AFA1D54DD3E00C866B9 /* UserLocation.swift in Sources */,
 				F10C86501D3FF7E80041CFC5 /* AppDelegate.swift in Sources */,
+				F14A3B061D58F5C900C866B9 /* VolunteerMatchCategories.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

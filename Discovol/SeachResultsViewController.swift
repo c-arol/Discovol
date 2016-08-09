@@ -62,7 +62,7 @@ class SearchResultsViewController: SearchViewController, UITableViewDataSource, 
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("SearchResultsTableViewCell")
+        let tableCell = tableView.dequeueReusableCellWithIdentifier("SearchResultsTableViewCell")
         let organization = self.results[indexPath.row]
     
     }
