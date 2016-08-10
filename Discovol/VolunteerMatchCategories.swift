@@ -6,7 +6,6 @@
 //  Copyright © 2016 Carol Zhang. All rights reserved.
 //
 
-//incomplete
 import Foundation
 
 class VolunteerMatchCategories {

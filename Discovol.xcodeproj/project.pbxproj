@@ -60,6 +60,7 @@
 		F14A3AFD1D54E04A00C866B9 /* VolunteerMatchClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolunteerMatchClient.swift; sourceTree = "<group>"; };
 		F14A3AFF1D54EC3C00C866B9 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		F14A3B051D58F5C900C866B9 /* VolunteerMatchCategories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolunteerMatchCategories.swift; sourceTree = "<group>"; };
+		F166C2671D5AFCAB005A3AF4 /* Discovol-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Discovol-Bridging-Header.h"; sourceTree = "<group>"; };
 		F17DD2DE1D4146660063F6B2 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		F17DD2DF1D4146660063F6B2 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		F17DD2E01D4146660063F6B2 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
@@ -137,6 +138,7 @@
 		F10C864E1D3FF7E80041CFC5 /* Discovol */ = {
 			isa = PBXGroup;
 			children = (
+				F166C2671D5AFCAB005A3AF4 /* Discovol-Bridging-Header.h */,
 				F14A3AF91D54DD3E00C866B9 /* UserLocation.swift */,
 				F14A3AFF1D54EC3C00C866B9 /* ActivityIndicator.swift */,
 				F14A3AFB1D54DE5200C866B9 /* VolunteerEvent.swift */,
@@ -469,6 +471,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.carol.Discovol;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Discovol/Discovol-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -484,10 +487,17 @@
 					"$(PROJECT_DIR)/Frameworks",
 					"$(PROJECT_DIR)",
 				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)/**",
+					"$(SRCROOT)/**",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Discovol/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.carol.Discovol;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Discovol/Discovol-Bridging-Header.h";
 			};
 			name = Release;
 		};

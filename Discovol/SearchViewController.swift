@@ -8,13 +8,16 @@
 
 import UIKit
 import Foundation
-import Alamofire
+import AFNetworking
+import SwiftyJSON
 
 class SearchViewController: UIViewController, UISearchBarDelegate { //CauseFilterViewDelegate {
     
     var searchBar: UISearchBar!
     
-   // var client: VolunteerMatchClient!
+    var client: VolunteerMatchClient!
+    
+    let volunteerMatchAPIKey = ""
     
     var userLocation: UserLocation!
     
@@ -27,29 +30,31 @@ class SearchViewController: UIViewController, UISearchBarDelegate { //CauseFilte
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        class VolunteerMatchClient {
+        //class VolunteerMatchClient {
             
-            let VolunteerMatchAPIKey = "575e6c77576da716371b142341bec7aa"
-            let apiToContact = "http://www.volunteermatch.org/api/call?action=searchOpportunities"
+            //let VolunteerMatchAPIKey = "575e6c77576da716371b142341bec7aa"
+            //let apiToContact = "http://www.volunteermatch.org/api/call?action=searchOpportunities"
             
-            Alamofire.request(.GET, apiToContact).validate().responseJSON() {response in
-            switch response.result {
-            case .Success:
-            if let value = response.result.value {
-            let json = JSON(value)
+            //func getEvent(){
+    
+            //Alamofire.request(.GET, apiToContact).validate().responseJSON() {response in
+            //switch response.result {
+            //case .Success:
+            //if let value = response.result.value {
+            //let json = JSON(value)
             
             // Do what you need to with JSON here!
             // The rest is all boiler plate code you'll use for API requests
             
             
-            }
-            case .Failure(let error):
-            print(error)
-            }
-            }
+            //}
+            //case .Failure(let error):
+            //print(error)
+            //}
+            //}
             
-        }
-        
+        //}
+        //}
         self.userLocation = UserLocation()
         
         self.searchBar = UISearchBar()
@@ -74,7 +79,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate { //CauseFilte
         self.searchBar.resignFirstResponder()
         self.onBeforeSearch()
         self.client.searchWithTerm(term, parameters: self.getSearchParameters(), offset: offset, limit: 30, success: {
-       //     (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
+            (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
             let results = (response["events"] as Array).map({
                 (business: NSDictionary) -> VolunteerEvent in
                 return VolunteerEvent(dictionary: opportunity)
@@ -86,8 +91,8 @@ class SearchViewController: UIViewController, UISearchBarDelegate { //CauseFilte
             self.offset = self.results.count
             self.onResults(self.results, total: self.total, response: self.lastResponse)
             }, failure: {
-         //       (operation: AFHTTPRequestOperation!, error: NSError!) -> Void in
-             //   println(error)
+                (operation: AFHTTPRequestOperation!, error: NSError!) -> Void in
+                println(error)
         })
     }
     

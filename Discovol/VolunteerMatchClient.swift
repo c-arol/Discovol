@@ -9,10 +9,12 @@
 //incomplete
 
 import Foundation
-import Alamofire
 import SwiftyJSON
+import AFNetworking
 
-//class VolunteerMatchClient {
+class VolunteerMatchClient {
+    
+    var accessToken: String!
     
     //let VolunteerMatchAPIKey = "575e6c77576da716371b142341bec7aa"
    // let apiToContact = "http://www.volunteermatch.org/api/call?action=searchOpportunities"
@@ -33,4 +35,16 @@ import SwiftyJSON
     //}
     //}
     
-//}
+    func searchWithTerm(term: String, parameters: Dictionary<String, String>? = nil, offset: Int = 0, limit: Int = 20, success: (AFHTTPRequestOperation!, AnyObject!) -> Void, failure: (AFHTTPRequestOperation!, NSError!) -> Void) -> AFHTTPRequestOperation! {
+        var params: NSMutableDictionary = [
+            "term": term,
+            "offset": offset,
+            "limit": limit
+        ]
+        for (key, value) in parameters! {
+            params.setValue(value, forKey: key)
+        }
+        return self.GET("search", parameters: params, success: success, failure: failure)
+    }
+    
+}
