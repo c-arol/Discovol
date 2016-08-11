@@ -53,8 +53,8 @@ class VolunteerMatchCategories {
 }
     
     func copyStateFrom(instance: VolunteerMatchCategories) {
-        for var f = 0; f < self.filters.count; f += 1 {
-            for var o = 0; o < self.filters[f].options.count; o += 1 {
+        for f in 0 ..< self.filters.count {
+            for o in 0 ..< self.filters[f].options.count {
                 self.filters[f].options[o].selected = instance.filters[f].options[o].selected
             }
         }

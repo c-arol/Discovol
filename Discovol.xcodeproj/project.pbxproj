@@ -37,6 +37,7 @@
 		F17DD2FB1D4147DF0063F6B2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17DD2ED1D4147DF0063F6B2 /* StoreKit.framework */; };
 		F17DD2FC1D4147DF0063F6B2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17DD2EE1D4147DF0063F6B2 /* SystemConfiguration.framework */; };
 		F17DD2FD1D4147DF0063F6B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17DD2EF1D4147DF0063F6B2 /* UIKit.framework */; };
+		F1C85C1F1D5CD9BA00F989D7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1C85C1E1D5CD9BA00F989D7 /* MapKit.framework */; };
 		F1F481D41D4E3FF600B0B129 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1F481D31D4E3FF600B0B129 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +61,6 @@
 		F14A3AFD1D54E04A00C866B9 /* VolunteerMatchClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolunteerMatchClient.swift; sourceTree = "<group>"; };
 		F14A3AFF1D54EC3C00C866B9 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		F14A3B051D58F5C900C866B9 /* VolunteerMatchCategories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolunteerMatchCategories.swift; sourceTree = "<group>"; };
-		F166C2671D5AFCAB005A3AF4 /* Discovol-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Discovol-Bridging-Header.h"; sourceTree = "<group>"; };
 		F17DD2DE1D4146660063F6B2 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		F17DD2DF1D4146660063F6B2 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		F17DD2E01D4146660063F6B2 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
@@ -76,6 +76,7 @@
 		F17DD2ED1D4147DF0063F6B2 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
 		F17DD2EE1D4147DF0063F6B2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		F17DD2EF1D4147DF0063F6B2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		F1C85C1E1D5CD9BA00F989D7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F1F481D31D4E3FF600B0B129 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +94,7 @@
 				F17DD2F61D4147DF0063F6B2 /* CoreGraphics.framework in Frameworks */,
 				F17DD2E21D4146660063F6B2 /* Parse.framework in Frameworks */,
 				F17DD2FA1D4147DF0063F6B2 /* Security.framework in Frameworks */,
+				F1C85C1F1D5CD9BA00F989D7 /* MapKit.framework in Frameworks */,
 				F17DD2E31D4146660063F6B2 /* ParseUI.framework in Frameworks */,
 				F17DD2F71D4147DF0063F6B2 /* CoreLocation.framework in Frameworks */,
 				F17DD2F41D4147DF0063F6B2 /* AudioToolbox.framework in Frameworks */,
@@ -138,7 +140,6 @@
 		F10C864E1D3FF7E80041CFC5 /* Discovol */ = {
 			isa = PBXGroup;
 			children = (
-				F166C2671D5AFCAB005A3AF4 /* Discovol-Bridging-Header.h */,
 				F14A3AF91D54DD3E00C866B9 /* UserLocation.swift */,
 				F14A3AFF1D54EC3C00C866B9 /* ActivityIndicator.swift */,
 				F14A3AFB1D54DE5200C866B9 /* VolunteerEvent.swift */,
@@ -208,6 +209,7 @@
 		F2865275255C7BE0E908CADA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F1C85C1E1D5CD9BA00F989D7 /* MapKit.framework */,
 				C956B44DA2A04256A6157331 /* Pods_Discovol.framework */,
 			);
 			name = Frameworks;
@@ -248,6 +250,12 @@
 				TargetAttributes = {
 					F10C864B1D3FF7E80041CFC5 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = P3CTGZF88H;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -460,6 +468,8 @@
 			baseConfigurationReference = CB6DF076D46BCC55C4A3D224 /* Pods-Discovol.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)/**",
@@ -471,7 +481,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.carol.Discovol;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Discovol/Discovol-Bridging-Header.h";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Debug;
 		};
@@ -480,6 +491,8 @@
 			baseConfigurationReference = C1638A2248146D356BD3D691 /* Pods-Discovol.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)/**",
@@ -497,7 +510,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.carol.Discovol;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Discovol/Discovol-Bridging-Header.h";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};

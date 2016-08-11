@@ -19,7 +19,6 @@ class EventDetailsViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var categoriesLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
-    @IBOutlet weak var dealsImage: UIImageView!
     @IBOutlet weak var mapView: MKMapView!
     
     var userLocation: UserLocation = UserLocation()

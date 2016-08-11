@@ -8,10 +8,10 @@
 
 import UIKit
 import Foundation
-import AFNetworking
+import Alamofire
 import SwiftyJSON
 
-class SearchViewController: UIViewController, UISearchBarDelegate { //CauseFilterViewDelegate {
+class SearchViewController: UIViewController, UISearchBarDelegate, CauseFilterViewDelegate {
     
     var searchBar: UISearchBar!
     
@@ -30,31 +30,29 @@ class SearchViewController: UIViewController, UISearchBarDelegate { //CauseFilte
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //class VolunteerMatchClient {
+        class VolunteerMatchClient {
             
-            //let VolunteerMatchAPIKey = "575e6c77576da716371b142341bec7aa"
-            //let apiToContact = "http://www.volunteermatch.org/api/call?action=searchOpportunities"
+            let VolunteerMatchAPIKey = "575e6c77576da716371b142341bec7aa"
+            let apiToContact = "http://www.volunteermatch.org/api/call?action=searchOpportunities"
             
-            //func getEvent(){
+            func getEvent(){
     
-            //Alamofire.request(.GET, apiToContact).validate().responseJSON() {response in
-            //switch response.result {
-            //case .Success:
-            //if let value = response.result.value {
-            //let json = JSON(value)
+            Alamofire.request(.GET, apiToContact).validate().responseJSON() {response in
+            switch response.result {
+            case .Success:
+            if let value = response.result.value {
+            let json = JSON(value)
             
-            // Do what you need to with JSON here!
-            // The rest is all boiler plate code you'll use for API requests
+                
             
+            }
+            case .Failure(let error):
+            print(error)
+            }
+            }
             
-            //}
-            //case .Failure(let error):
-            //print(error)
-            //}
-            //}
-            
-        //}
-        //}
+        }
+        }
         self.userLocation = UserLocation()
         
         self.searchBar = UISearchBar()
@@ -75,25 +73,25 @@ class SearchViewController: UIViewController, UISearchBarDelegate { //CauseFilte
     }
     
     final func performSearch(term: String, offset: Int = 0, limit: Int = 20) {
-        self.searchBar.text = term
-        self.searchBar.resignFirstResponder()
-        self.onBeforeSearch()
-        self.client.searchWithTerm(term, parameters: self.getSearchParameters(), offset: offset, limit: 30, success: {
-            (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
-            let results = (response["events"] as Array).map({
-                (business: NSDictionary) -> VolunteerEvent in
-                return VolunteerEvent(dictionary: opportunity)
-            })
+        //self.searchBar.text = term
+        //self.searchBar.resignFirstResponder()
+        //self.onBeforeSearch()
+        //self.client.searchWithTerm(term, parameters: self.getSearchParameters(), offset: offset, limit: 30, success: {
+            //(operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
+            //let results = (response["events"] as Array).map({
+                //(event: NSDictionary) -> VolunteerEvent in
+                //return VolunteerEvent(dictionary: opportunity)
+            //})
             
-            self.results += results
-            self.total = response["total"] as Int
-            self.lastResponse = response as NSDictionary
-            self.offset = self.results.count
-            self.onResults(self.results, total: self.total, response: self.lastResponse)
-            }, failure: {
-                (operation: AFHTTPRequestOperation!, error: NSError!) -> Void in
-                println(error)
-        })
+            //self.results += results
+            //self.total = response["total"] as Int
+            //self.lastResponse = response as NSDictionary
+            //self.offset = self.results.count
+            //self.onResults(self.results, total: self.total, response: self.lastResponse)
+            //}, failure: {
+                //(operation: AFHTTPRequestOperation!, error: NSError!) -> Void in
+                //println(error)
+        //})
     }
     
     func getSearchParameters() -> Dictionary<String, String> {

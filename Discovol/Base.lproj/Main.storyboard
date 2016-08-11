@@ -453,10 +453,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Crosshair" width="16" height="16"/>
+        <image name="Crosshair" width="20" height="20"/>
         <image name="Deals" width="16" height="16"/>
-        <image name="Map" width="16" height="16"/>
-        <image name="Search" width="16" height="16"/>
+        <image name="Map" width="24" height="24"/>
+        <image name="Search" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="LXr-bp-GbQ"/>

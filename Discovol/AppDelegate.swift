@@ -19,17 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        // Set up the Parse SDK
         let configuration = ParseClientConfiguration {
             $0.applicationId = "discovol"
             $0.server = "https://discovol-parse-cz.herokuapp.com/parse"
         }
         Parse.initializeWithConfiguration(configuration)
         
-        VolunteerMatchClient.provideAPIKey("575e6c77576da716371b142341bec7aa")
-        
-        GMSServices.provideAPIKey("AIzaSyACodrK6e1mAx4UX2p64LxCI6P3d2odh-4")
-        //GMSPlacesClient.provideAPIKey("AIzaSyACodrK6e1mAx4UX2p64LxCI6P3d2odh-4")
+        //VolunteerMatchClient.provideAPIKey("575e6c77576da716371b142341bec7aa")
         
         return true
     }

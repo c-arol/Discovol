@@ -64,7 +64,7 @@ class MapViewController: SearchViewController, MKMapViewDelegate {
         for event in results {
             let annotation = MKPointAnnotation()
             let coordinate = CLLocationCoordinate2D(latitude: event.latitude!, longitude: event.longitude!)
-            annotation.setCoordinate(coordinate)
+            annotation.coordinate = (coordinate)
             annotation.title = event.name
             annotation.subtitle = event.displayCategories
             self.annotations.append(annotation)
@@ -121,6 +121,7 @@ class MapViewController: SearchViewController, MKMapViewDelegate {
             self.redoSearchButton.hidden = self.searchBar.text == "" || before.distanceFromLocation(now) < 100
         }
     }
+    
     
     @IBAction func onRedoSearchButton(sender: AnyObject) {
         self.clearResults()

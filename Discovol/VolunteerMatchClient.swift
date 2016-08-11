@@ -10,7 +10,7 @@
 
 import Foundation
 import SwiftyJSON
-import AFNetworking
+import Alamofire
 
 class VolunteerMatchClient {
     
@@ -35,16 +35,16 @@ class VolunteerMatchClient {
     //}
     //}
     
-    func searchWithTerm(term: String, parameters: Dictionary<String, String>? = nil, offset: Int = 0, limit: Int = 20, success: (AFHTTPRequestOperation!, AnyObject!) -> Void, failure: (AFHTTPRequestOperation!, NSError!) -> Void) -> AFHTTPRequestOperation! {
-        var params: NSMutableDictionary = [
-            "term": term,
-            "offset": offset,
-            "limit": limit
-        ]
-        for (key, value) in parameters! {
-            params.setValue(value, forKey: key)
-        }
-        return self.GET("search", parameters: params, success: success, failure: failure)
-    }
+    //func searchWithTerm(term: String, parameters: Dictionary<String, String>? = nil, offset: Int = 0, limit: Int = 20, success: //(AFHTTPRequestOperation!, AnyObject!) -> Void, failure: (AFHTTPRequestOperation!, NSError!) -> Void) -> AFHTTPRequestOperation! {
+        //var params: NSMutableDictionary = [
+            //"term": term,
+            //"offset": offset,
+            //"limit": limit
+        //]
+        //for (key, value) in parameters! {
+            //params.setValue(value, forKey: key)
+        //}
+        //return self.GET("search", parameters: params, success: success, failure: failure)
+    //}
     
 }
