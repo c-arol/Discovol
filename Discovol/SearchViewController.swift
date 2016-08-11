@@ -30,29 +30,9 @@ class SearchViewController: UIViewController, UISearchBarDelegate, CauseFilterVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        class VolunteerMatchClient {
-            
-            let VolunteerMatchAPIKey = "575e6c77576da716371b142341bec7aa"
-            let apiToContact = "http://www.volunteermatch.org/api/call?action=searchOpportunities"
-            
-            func getEvent(){
-    
-            Alamofire.request(.GET, apiToContact).validate().responseJSON() {response in
-            switch response.result {
-            case .Success:
-            if let value = response.result.value {
-            let json = JSON(value)
-            
-                
-            
-            }
-            case .Failure(let error):
-            print(error)
-            }
-            }
-            
-        }
-        }
+        VolunteerMatchClient.parseJSON()
+        
+        
         self.userLocation = UserLocation()
         
         self.searchBar = UISearchBar()
